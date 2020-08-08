@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Mailtrain
- * Plugin URI:        https://github.com/mailtrain-org/mailtrain-wordpress-plugin
+ * Plugin Name:       Mailtrain Loftwah Edition
+ * Plugin URI:        https://github.com/loftwah/mailtrain-wordpress-plugin
  * Description:       A plugin to embed Mailtrain subscription forms.
- * Version:           0.1
- * Author:            Mailtrain.org
- * Author URI:        https://mailtrain.org
+ * Version:           0.2
+ * Author:            Dean Lofts, based on the original Mailtrain.org plugin
+ * Author URI:        https://www.beatsmiff.com https://mailtrain.org
  * License:           GPLv3
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
- * GitHub Plugin URI: https://github.com/mailtrain-org/mailtrain-wordpress-plugin
+ * GitHub Plugin URI: https://github.com/loftwah/mailtrain-wordpress-plugin
  * Requires WP:       4.4
  * Requires PHP:      5.4
  */
@@ -17,12 +17,12 @@ namespace Mailtrain;
 
 defined('ABSPATH') || exit;
 
-wp_register_script('mailtrain-subscription-widget', 'https://cdn.rawgit.com/mailtrain-org/mailtrain/v1.23.2/public/subscription/widget.js', [], '', true);
+wp_register_script('mailtrain-subscription-widget', 'https://raw.githubusercontent.com/Mailtrain-org/mailtrain/206e7a5b5215da9cb3963fb7f65b564ebd570592/public/subscription/widget.js', [], '', true);
 
 add_shortcode('mailtrain-subscription-widget', function($atts) {
     $atts = shortcode_atts([
         'url' => '',
-        'fallback-text' => 'Subscribe to our list',
+        'fallback-text' => 'Subscribe to our newletter',
     ], $atts);
 
     $url = rtrim(trim($atts['url']), '/');
@@ -44,7 +44,7 @@ class Subscription_Widget extends \WP_Widget {
     public function __construct() {
         parent::__construct('mailtrain-subscription-widget', 'Mailtrain', [
             'classname' => 'mailtrain-widget',
-            'description' => 'Mailtrain Subscription Widget'
+            'description' => 'Mailtrain LE Subscription Widget'
         ]);
     }
 
