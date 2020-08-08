@@ -18,7 +18,7 @@ Same parameters as the shortcode plus an optional widget title.
 
 ## Installation
 
-1. Download the repository .zip file: [mailtrain-wordpress-plugin.zip](https://github.com/mailtrain-org/mailtrain-wordpress-plugin/archive/master.zip)
+1. Download the repository .zip file: [mailtrain-wordpress-plugin.zip](https://github.com/loftwah/mailtrain-wordpress-plugin/archive/master.zip)
 2. In WordPress, nagitate to Plugins → Add New, then upload the zip file and activate the plugin
 3. Install the [GitHub Updater](https://github.com/afragen/github-updater) for automatic updates (optional)
 4. [Enable cross-origin resource sharing](https://github.com/Mailtrain-org/mailtrain#subscription-widget) in your Mailtrain `config` file and whitelist your site
